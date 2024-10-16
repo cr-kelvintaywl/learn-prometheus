@@ -21,3 +21,9 @@ services:
     volumes:
        - '/run/podman/podman.sock:/run/podman/podman.sock'
     user: root
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana-enterprise
+    ports:
+     - '3000:3000'
