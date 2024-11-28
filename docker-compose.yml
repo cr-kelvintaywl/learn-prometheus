@@ -22,6 +22,12 @@ services:
        - '/run/podman/podman.sock:/run/podman/podman.sock'
     user: root
 
+  app:
+    container_name: app
+    image: quay.io/brancz/prometheus-example-app:v0.3.0
+    ports:
+      - '8080:8080'
+
   grafana:
     container_name: grafana
     image: grafana/grafana-enterprise
